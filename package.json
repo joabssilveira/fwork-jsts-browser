@@ -16,7 +16,7 @@
 		"dist",
 		"src"
 	],
-	"homepage": "https://github.com/joabssilveira/work-jsts-browser",
+	"homepage": "https://github.com/joabssilveira/fwork-jsts-browser",
 	"keywords": [
 		"javascript",
 		"typescript",
@@ -26,7 +26,7 @@
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"types": "dist/types/index.d.ts",
-	"name": "work-jsts-browser",
+	"name": "fwork-jsts-browser",
 	"prettier": {
 		"printWidth": 80,
 		"semi": true,
@@ -39,7 +39,7 @@
 		"release": "standard-version",
 		"pub": "npm run build && npm run release && git push --follow-tags origin main && npm publish"
 	},
-	"version": "0.0.2",
+	"version": "0.0.0",
 	"exports": {
 		".": {
 			"types": "./dist/types/index.d.ts",
