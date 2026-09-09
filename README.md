@@ -1,1 +1,1 @@
-# Fwork jsts common
+# Fwork jsts browser

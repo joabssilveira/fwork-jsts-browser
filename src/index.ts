@@ -1,5 +1,7 @@
 const openedWindows = new Map<string, Window>();
 
+export const browserLang = (navigator.language || navigator.languages[0] || 'pt-BR') // ex: 'pt-br'
+
 export function windowOpenOnce(windowName: string, url: string) {
   const existingWindow = openedWindows.get(windowName);
 
@@ -68,10 +70,12 @@ export class BrowserUtils {
   }
 
   static deleteCookie(cname: string) {
-    let d = new Date();
-    d.setTime(d.getTime() - (24 * 60 * 60 * 1000)); // Define a data de expiração para um dia atrás
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=;" + expires + ";path=/";
+    BrowserUtils.setCookie(cname, '', -1)
+
+    // let d = new Date();
+    // d.setTime(d.getTime() - (24 * 60 * 60 * 1000)); // Define a data de expiração para um dia atrás
+    // let expires = "expires=" + d.toUTCString();
+    // document.cookie = cname + "=;" + expires + ";path=/";
   }
 
   static getCookieObj<T extends object>(cname: string): T | undefined {
